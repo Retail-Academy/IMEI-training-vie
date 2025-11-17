@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMEI Training – Nguyễn Kim</title>
+
+<style>
+/* ============================== */
+/* GLOBAL STYLE */
+/* ============================== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: white;
+    color: #333;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+.section-title {
+    border-left: 6px solid #e60012;
+    padding-left: 12px;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* ============================== */
+/* HEADER */
+/* ============================== */
+header {
+    background: #e60012;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* ============================== */
+/* ANIMATION */
+/* ============================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.8s ease-out;
+}
+
+.slide-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all 0.8s ease-out;
+}
+
+.slide-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ============================== */
+/* CONTENT CONTAINERS */
+/* ============================== */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+/* CHARACTER CARDS */
+.characters {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+}
+
+.char-card {
+    width: 300px;
+    border: 2px solid #e60012;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.char-card img {
+    width: 100%;
+}
+
+.char-card h3 {
+    text-align: center;
+    background: #e60012;
+    color: white;
+    padding: 10px;
+}
+
+.char-card p {
+    padding: 10px;
+    text-align: center;
+}
+
+/* ============================== */
+/* FRAME BLOCKS */
+/* ============================== */
+.frame {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.frame-text {
+    flex: 1;
+}
+
+.frame-text h3 {
+    color: #e60012;
+    margin-bottom: 10px;
+}
+
+.frame-image {
+    flex: 1;
+    text-align: right;
+}
+
+.frame-image img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #e60012;
+}
+
+/* ============================== */
+/* RESPONSIVE */
+/* ============================== */
+@media (max-width: 850px) {
+    .frame {
+        flex-direction: column;
+        text-align: center;
+    }
+    .frame-image img {
+        width: 90%;
+    }
+    .frame-text {
+        text-align: left;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #eee;
+    margin-top: 50px;
+}
+</style>
+</head>
+
+<body>
+
+<header class="fade-in">
+    <h1>IMEI TRAINING – NGUYỄN KIM</h1>
+    <p>One-page Scrolling Storytelling</p>
+</header>
+
+<div class="container">
+
+    <!-- INTRO -->
+    <h2 class="section-title fade-in">🎯 Mục tiêu đào tạo IMEI</h2>
+    <p class="fade-in">
+        Quản lý IMEI chính xác giúp đảm bảo tồn kho đúng, giảm sai sót giao dịch và phục vụ khách tốt hơn. 
+        Hãy đồng hành cùng 3 nhân vật chính trong hành trình học IMEI!
+    </p>
+
+    <!-- CHARACTERS -->
+    <h2 class="section-title fade-in">👥 Nhân vật chính</h2>
+
+    <div class="characters">
+
+        <div class="char-card slide-left">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Nam_Trainer.png?token=GHSAT0AAAAAADN4IB4CZRAQ2EU2WK5ATTXI2I2XSHA" />
+            <h3>Anh Nam – Trainer</h3>
+            <p>Kinh nghiệm nhiều năm trong vận hành SAP & kho.</p>
+        </div>
+
+        <div class="char-card fade-in">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Linh_Rookie.png?token=GHSAT0AAAAAADN4IB4DDS4ZUPVZ3M4CINJE2I2XSWQ" />
+            <h3>Linh – Rookie</h3>
+            <p>Nhân viên kho mới, năng động, ham học.</p>
+        </div>
+
+        <div class="char-card slide-right">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/IMEI_BOT.png?token=GHSAT0AAAAAADN4IB4C7D4ZLZYDMIF3HDJ42I2XTEQ" />
+            <h3>IMEI Bot</h3>
+            <p>Trợ lý hệ thống, xuất hiện khi có lỗi.</p>
+        </div>
+
+    </div>
+
+    <!-- 12 FRAMES -->
+    <h2 class="section-title fade-in">📘 12 Frames – Scrolling Story</h2>
+
+    <!-- FRAME TEMPLATE (Repeat 12 times with images + text) -->
+
+    <!-- FRAME 1 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>Frame 1 – Bắt đầu buổi học IMEI</h3>
+            <p>
+                Anh Nam giới thiệu: “Hôm nay chúng ta học toàn bộ quy trình IMEI.”  
+                <br>Linh: “Dạ, em rất muốn hiểu để tránh sai sót.”
+            </p>
+        </div>
+        <div class="frame-image slide-right">
+            <img src="https://github.com/Retail-Academy/IMEI-training-vie/blob/main/Frame%201.png">
+        </div>
+    </div>
+
+    <!-- FRAME 2 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>Frame 2 – Chọn tab Serial Number</h3>
+            <p>
+                Mọi thao tác IMEI đều nhập tại tab Serial Number.  
+                <br>Anh Nam: “Quên tab này là sai ngay.”
+            </p>
+        </div>
+        <div class="frame-image slide-left">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Frame%202.png?token=GHSAT0AAAAAADN4IB4CJYFMHXW6IJH5WOMU2I2XN3Q">
+        </div>
+    </div>
+
+    <!-- FRAME 3 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>Frame 3 – Scan IMEI từng dòng</h3>
+            <p>
+                SAP không tự nhảy dòng. Scan từng IMEI theo thứ tự.  
+            </p>
+        </div>
+        <div class="frame-image slide-right">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Frame%203.png?token=GHSAT0AAAAAADN4IB4CU6KQQWDGUEQX62Y42I2XOKA">
+        </div>
+    </div>
+
+    <!-- FRAME 4 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>Frame 4 – Lỗi IMEI thiếu</h3>
+            <p>
+                IMEI Bot: “⚠️ IMEI quantity < GR quantity.”  
+                <br>Linh bổ sung ngay IMEI còn thiếu.
+            </p>
+        </div>
+        <div class="frame-image slide-left">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Frame%204.png?token=GHSAT0AAAAAADN4IB4DFRTODTRYJPPOITJ62I2XOVQ">
+        </div>
+    </div>
+
+    <!-- FRAME 5 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>Frame 5 – Kiểm tra IMEI trước khi chuyển kho</h3>
+            <p>
+                Luôn dùng ZMB52 để xem IMEI đang thuộc kho nào.
+            </p>
+        </div>
+        <div class="frame-image slide-right">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Frame%205.png?token=GHSAT0AAAAAADN4IB4CTOWRSIMGA6W2JWCS2I2XPAQ">
+        </div>
+    </div>
+
+    <!-- FRAME 6 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>Frame 6 – Lỗi IMEI sai kho</h3>
+            <p>
+                IMEI Bot: “❌ IMEI not in selected warehouse.”  
+            </p>
+        </div>
+        <div class="frame-image slide-left">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Frame%206.png?token=GHSAT0AAAAAADN4IB4CXX4FEE5XILV5CYCA2I2XPMQ">
+        </div>
+    </div>
+
+    <!-- FRAME 7 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>Frame 7 – Giải thích lỗi IMEI</h3>
+            <p>
+                IMEI có thể đang ở kho khác hoặc đã xuất.
+            </p>
+        </div>
+        <div class="frame-image slide-right">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Frame%207.png?token=GHSAT0AAAAAADN4IB4COJJJNHJXIJHDL6UY2I2XPXQ">
+        </div>
+    </div>
+
+    <!-- FRAME 8 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>Frame 8 – Xuất kho đúng IMEI</h3>
+            <p>
+                Xuất kho phải khớp 100% IMEI với OD.
+            </p>
+        </div>
+        <div class="frame-image slide-left">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Frame%208.png?token=GHSAT0AAAAAADN4IB4CGY7SW3S3MEI2W6CS2I2XQBQ">
+        </div>
+    </div>
+
+    <!-- FRAME 9 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>Frame 9 – IMEI hợp lệ</h3>
+            <p>
+                Hệ thống hiển thị “IMEI accepted” màu xanh.
+            </p>
+        </div>
+        <div class="frame-image slide-right">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Frame%209.png?token=GHSAT0AAAAAADN4IB4CNKJXALJ52CYFQK7K2I2XQNA">
+        </div>
+    </div>
+
+    <!-- FRAME 10 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>Frame 10 – Lỗi IMEI trùng</h3>
+            <p>
+                IMEI Bot: “❌ IMEI already used.”
+            </p>
+        </div>
+        <div class="frame-image slide-left">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Frame%2010.png?token=GHSAT0AAAAAADN4IB4DTEOHKLDRGB44HW322I2XQXQ">
+        </div>
+    </div>
+
+    <!-- FRAME 11 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>Frame 11 – Kiểm tra tồn IMEI</h3>
+            <p>
+                ZMB52 → xem IMEI còn tồn ở kho nào.
+            </p>
+        </div>
+        <div class="frame-image slide-right">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Frame%2011.png?token=GHSAT0AAAAAADN4IB4D5E2PU2NWNA47NUAM2I2XRBQ">
+        </div>
+    </div>
+
+    <!-- FRAME 12 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>Frame 12 – Kết thúc buổi training</h3>
+            <p>
+                Anh Nam: “Chúc mừng Linh!”  
+                <br>IMEI Bot: “Training completed ✔”
+            </p>
+        </div>
+        <div class="frame-image slide-left">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Frame%2012.png?token=GHSAT0AAAAAADN4IB4C6SGXSTVU63AFI2RY2I2XRUA">
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 Nguyễn Kim – IMEI Training Page
+</footer>
+
+<!-- ============================== -->
+<!-- JS: Trigger animation on scroll -->
+<!-- ============================== -->
+<script>
+const elements = document.querySelectorAll(".fade-in, .slide-left, .slide-right");
+
+function showOnScroll() {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    elements.forEach(el => {
+        const rect = el.getBoundingClientRect().top;
+        if (rect < triggerBottom) {
+            el.classList.add("visible");
+        }
+    });
+}
+
+window.addEventListener("scroll", showOnScroll);
+window.addEventListener("load", showOnScroll);
+</script>
+
+</body>
+</html>
