@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMEI Training – Nguyen Kim</title>
+
+<style>
+/* ============================== */
+/* GLOBAL STYLE */
+/* ============================== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: white;
+    color: #333;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+.section-title {
+    border-left: 6px solid #e60012;
+    padding-left: 12px;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* ============================== */
+/* HEADER */
+/* ============================== */
+header {
+    background: #e60012;
+    padding: 30px 20px;
+    text-align: center;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* ============================== */
+/* LANGUAGE SWITCH (fixed top-right) */
+/* ============================== */
+.lang-switch {
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    z-index: 2000;
+    display: flex;
+    gap: 12px;
+    background: rgba(255,255,255,0.85);
+    padding: 6px 14px;
+    border-radius: 18px;
+    border: 1px solid #e60012;
+    backdrop-filter: blur(6px);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.lang-switch a {
+    text-decoration: none;
+    color: #e60012;
+    font-weight: 700;
+}
+
+.lang-switch .active {
+    color: white;
+    background: #e60012;
+    padding: 3px 10px;
+    border-radius: 12px;
+}
+
+/* ============================== */
+/* ANIMATION */
+/* ============================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.8s ease-out;
+}
+
+.slide-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all 0.8s ease-out;
+}
+
+.slide-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ============================== */
+/* CONTENT */
+/* ============================== */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+/* CHARACTER CARDS */
+.characters {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+}
+
+.char-card {
+    width: 300px;
+    border: 2px solid #e60012;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.char-card img {
+    width: 100%;
+}
+
+.char-card h3 {
+    text-align: center;
+    background: #e60012;
+    color: white;
+    padding: 10px;
+}
+
+.char-card p {
+    padding: 10px;
+    text-align: center;
+}
+
+/* ============================== */
+/* FRAME BLOCKS */
+/* ============================== */
+.frame {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.frame-text {
+    flex: 1;
+}
+
+.frame-text h3 {
+    color: #e60012;
+    margin-bottom: 10px;
+}
+
+.frame-image {
+    flex: 1;
+    text-align: right;
+}
+
+.frame-image img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #e60012;
+}
+
+/* ============================== */
+/* RESPONSIVE */
+/* ============================== */
+@media (max-width: 850px) {
+    .frame {
+        flex-direction: column;
+        text-align: center;
+    }
+    .frame-image img {
+        width: 90%;
+    }
+    .frame-text {
+        text-align: left;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #eee;
+    margin-top: 50px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🌐 LANGUAGE SWITCH -->
+<div class="lang-switch">
+    <a href="index.html">🇻🇳 VI</a>
+    <span class="active">EN 🇬🇧</span>
+</div>
+
+<header class="fade-in">
+    <h1>IMEI TRAINING – NGUYEN KIM</h1>
+</header>
+
+<div class="container">
+
+    <!-- INTRO -->
+    <h2 class="section-title fade-in">🎯 IMEI Training Objective</h2>
+    <p class="fade-in">
+        Accurate IMEI management ensures correct stock, reduces transaction errors, and improves customer service.
+        Follow our 3 characters in this IMEI learning journey!
+    </p>
+
+    <!-- CHARACTERS -->
+    <h2 class="section-title fade-in">👥 Main Characters</h2>
+
+    <div class="characters">
+
+        <div class="char-card slide-left">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Nam_Trainer.png?token=GHSAT0AAAAAADN4IB4CZRAQ2EU2WK5ATTXI2I2XSHA" />
+            <h3>Nam – Trainer</h3>
+            <p>Years of experience in SAP operations & warehouse.</p>
+        </div>
+
+        <div class="char-card fade-in">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Linh_Rookie.png?token=GHSAT0AAAAAADN4IB4DDS4ZUPVZ3M4CINJE2I2XSWQ" />
+            <h3>Linh – Rookie</h3>
+            <p>Energetic new warehouse staff, eager to learn.</p>
+        </div>
+
+        <div class="char-card slide-right">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/IMEI_BOT.png?token=GHSAT0AAAAAADN4IB4C7D4ZLZYDMIF3HDJ42I2XTEQ" />
+            <h3>IMEI Bot</h3>
+            <p>System assistant that appears whenever there’s an error.</p>
+        </div>
+
+    </div>
+
+    <!-- 12 FRAMES -->
+    <h2 class="section-title fade-in">📘 12 Frames – Scrolling Story</h2>
+
+    <!-- FRAME 1 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>Welcome to IMEI Training</h3>
+            <p>
+                IMEI is the unique identification of each product. Managing IMEI correctly = managing stock and transactions correctly.
+                Today, we will learn the full IMEI process in SAP & PDW.
+                <br><br><b>Nam:</b> “Linh, are you ready? Today we’ll learn IMEI from A–Z.”
+                <br><b>Linh:</b> “Yes, I want to understand everything clearly to avoid mistakes.”
+            </p>
+        </div>
+        <div class="frame-image slide-right">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Frame%201.png?token=GHSAT0AAAAAADN4IB4CQIN6SP6MYP3QZ4M22I2XWGQ">
+        </div>
+    </div>
+
+    <!-- FRAME 2 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>Important Step: Select the Serial Number Tab</h3>
+            <p>
+                When receiving or issuing IMEI stock, always go to the “Serial Number” tab and enter IMEIs line by line.
+                <br><br><b>Nam:</b> “This is where you enter all IMEIs. Never forget this tab.”
+                <br><b>Linh:</b> “Got it. If I miss this tab, everything goes wrong.”
+            </p>
+        </div>
+        <div class="frame-image slide-left">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Frame%202.png?token=GHSAT0AAAAAADN4IB4CJYFMHXW6IJH5WOMU2I2XN3Q">
+        </div>
+    </div>
+
+    <!-- FRAME 3 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>Scan IMEI Line by Line</h3>
+            <p>
+                SAP does not auto-jump between lines. Each IMEI must be scanned into the correct line manually.
+                <br><br><b>Nam:</b> “Scan one IMEI per line. Don’t scan continuously.”
+                <br><b>Linh:</b> “Yes, I’m scanning carefully line by line.”
+            </p>
+        </div>
+        <div class="frame-image slide-right">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Frame%203.png?token=GHSAT0AAAAAADN4IB4CU6KQQWDGUEQX62Y42I2XOKA">
+        </div>
+    </div>
+
+    <!-- FRAME 4 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>Error: IMEI Quantity Less Than Required</h3>
+            <p>
+                If the number of IMEIs is less than the GR quantity, SAP blocks the process immediately.
+                <br><br><b>IMEI Bot:</b> “⚠️ Error: IMEI quantity &lt; GR quantity.”
+                <br><b>Nam:</b> “Check if you missed any IMEI.”
+                <br><b>Linh:</b> “I’ll add the missing ones now.”
+            </p>
+        </div>
+        <div class="frame-image slide-left">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Frame%204.png?token=GHSAT0AAAAAADN4IB4DFRTODTRYJPPOITJ62I2XOVQ">
+        </div>
+    </div>
+
+    <!-- FRAME 5 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>Check IMEI Before Transferring Warehouse</h3>
+            <p>
+                Always use ZMB52 to confirm where an IMEI currently belongs before doing any transfer.
+                <br><br><b>Nam:</b> “Check the warehouse of each IMEI first.”
+                <br><b>Linh:</b> “I’m checking the IMEI list now.”
+            </p>
+        </div>
+        <div class="frame-image slide-right">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Frame%205.png?token=GHSAT0AAAAAADN4IB4CTOWRSIMGA6W2JWCS2I2XPAQ">
+        </div>
+    </div>
+
+    <!-- FRAME 6 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>Error: IMEI Not in Source Warehouse</h3>
+            <p>
+                If an IMEI does not exist in the selected warehouse, SAP will block the transfer.
+                <br><br><b>IMEI Bot:</b> “❌ Error 03 – IMEI not in selected warehouse.”
+                <br><b>Linh:</b> “Why is this IMEI in a different warehouse?”
+                <br><b>Nam:</b> “It belongs somewhere else. Check ZMB52 again.”
+            </p>
+        </div>
+        <div class="frame-image slide-left">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Frame%206.png?token=GHSAT0AAAAAADN4IB4CXX4FEE5XILV5CYCA2I2XPMQ">
+        </div>
+    </div>
+
+    <!-- FRAME 7 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>Understanding IMEI Errors</h3>
+            <p>
+                This error occurs when an IMEI is in another warehouse, already issued, or locked in a different status.
+                <br><br><b>IMEI Bot:</b> “IMEI does not exist in this warehouse. Please check the original warehouse.”
+                <br><b>Linh:</b> “Got it. I must check IMEI before doing anything.”
+            </p>
+        </div>
+        <div class="frame-image slide-right">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Frame%207.png?token=GHSAT0AAAAAADN4IB4COJJJNHJXIJHDL6UY2I2XPXQ">
+        </div>
+    </div>
+
+    <!-- FRAME 8 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>Issue Stock With Correct IMEI</h3>
+            <p>
+                IMEIs must match the Order Delivery (OD) exactly. Any mismatch causes stock errors immediately.
+                <br><br><b>Nam:</b> “Enter IMEI exactly as in the OD.”
+                <br><b>Linh:</b> “I’m matching IMEIs with the OD now.”
+            </p>
+        </div>
+        <div class="frame-image slide-left">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Frame%208.png?token=GHSAT0AAAAAADN4IB4CGY7SW3S3MEI2W6CS2I2XQBQ">
+        </div>
+    </div>
+
+    <!-- FRAME 9 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>IMEI Accepted – System Confirmation</h3>
+            <p>
+                When IMEIs are correct, SAP displays a green confirmation message: IMEI accepted.
+                <br><br><b>Linh:</b> “I see the green message. That means it's OK, right?”
+                <br><b>Nam:</b> “Correct. That means the IMEI is valid.”
+            </p>
+        </div>
+        <div class="frame-image slide-right">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Frame%209.png?token=GHSAT0AAAAAADN4IB4CNKJXALJ52CYFQK7K2I2XQNA">
+        </div>
+    </div>
+
+    <!-- FRAME 10 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>Warning: IMEI Already Used</h3>
+            <p>
+                If an IMEI has been used in any previous transaction, SAP will not allow it again.
+                <br><br><b>IMEI Bot:</b> “❌ Error 02 – IMEI already used.”
+                <br><b>Linh:</b> “Oh, this was returned by a customer before?”
+                <br><b>Nam:</b> “Yes. You must choose the IMEI that's still available.”
+            </p>
+        </div>
+        <div class="frame-image slide-left">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Frame%2010.png?token=GHSAT0AAAAAADN4IB4DTEOHKLDRGB44HW322I2XQXQ">
+        </div>
+    </div>
+
+    <!-- FRAME 11 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>Check IMEI Stock Using ZMB52</h3>
+            <p>
+                Use ZMB52 to check where an IMEI is located, its status, and whether it is still available.
+                <br><br><b>Linh:</b> “I checked ZMB52. This IMEI is still in warehouse 001.”
+                <br><b>Nam:</b> “Good. This report must be checked daily.”
+            </p>
+        </div>
+        <div class="frame-image slide-right">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Frame%2011.png?token=GHSAT0AAAAAADN4IB4D5E2PU2NWNA47NUAM2I2XRBQ">
+        </div>
+    </div>
+
+    <!-- FRAME 12 -->
+    <div class="frame fade-in">
+        <div class="frame-text">
+            <h3>Training Completed</h3>
+            <p>
+                Mastering IMEI helps reduce store errors, speed up reconciliation, and improve accuracy in customer service.
+                <br><br><b>Nam:</b> “Congratulations Linh! You’ve completed the IMEI process.”
+                <br><b>Linh:</b> “Thank you. I feel much more confident now.”
+                <br><b>IMEI Bot:</b> “Status: Training Completed. Expected error rate: -90%.”
+            </p>
+        </div>
+        <div class="frame-image slide-left">
+            <img src="https://raw.githubusercontent.com/Retail-Academy/IMEI-training-vie/refs/heads/main/Frame%2012.png?token=GHSAT0AAAAAADN4IB4C6SGXSTVU63AFI2RY2I2XRUA">
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 Nguyen Kim – IMEI Training Page
+</footer>
+
+<!-- ============================== -->
+<!-- JS: Trigger animation on scroll -->
+<!-- ============================== -->
+<script>
+const elements = document.querySelectorAll(".fade-in, .slide-left, .slide-right");
+
+function showOnScroll() {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    elements.forEach(el => {
+        const rect = el.getBoundingClientRect().top;
+        if (rect < triggerBottom) {
+            el.classList.add("visible");
+        }
+    });
+}
+
+window.addEventListener("scroll", showOnScroll);
+window.addEventListener("load", showOnScroll);
+</script>
+
+</body>
+</html>
