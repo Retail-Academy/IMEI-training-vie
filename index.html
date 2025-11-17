@@ -34,12 +34,44 @@ h1, h2, h3 {
 /* ============================== */
 header {
     background: #e60012;
-    padding: 30px 20px;  /* giảm 50% so với bản trước */
+    padding: 30px 20px;
     text-align: center;
     color: white;
     position: sticky;
     top: 0;
     z-index: 100;
+}
+
+/* ============================== */
+/* LANGUAGE SWITCH (fixed top-right) */
+/* ============================== */
+.lang-switch {
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    z-index: 2000;
+    display: flex;
+    gap: 12px;
+    background: rgba(255,255,255,0.85);
+    padding: 6px 14px;
+    border-radius: 18px;
+    border: 1px solid #e60012;
+    backdrop-filter: blur(6px);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.lang-switch a {
+    text-decoration: none;
+    color: #e60012;
+    font-weight: 700;
+}
+
+.lang-switch .active {
+    color: white;
+    background: #e60012;
+    padding: 3px 10px;
+    border-radius: 12px;
 }
 
 /* ============================== */
@@ -177,6 +209,12 @@ footer {
 
 <body>
 
+<!-- 🌐 FIXED LANGUAGE SWITCH -->
+<div class="lang-switch">
+    <span class="active">🇻🇳 VI</span>
+    <a href="en.html">EN 🇬🇧</a>
+</div>
+
 <header class="fade-in">
     <h1>IMEI TRAINING – NGUYỄN KIM</h1>
 </header>
@@ -218,14 +256,14 @@ footer {
     <!-- 12 FRAMES -->
     <h2 class="section-title fade-in">📘 12 Frames – Scrolling Story</h2>
 
-    <!-- FRAME 1 -->
+    <!-- ================= FRAME 1 ================= -->
     <div class="frame fade-in">
         <div class="frame-text">
             <h3>Chào mừng đến buổi Training IMEI</h3>
             <p>
                 IMEI là mã định danh duy nhất của sản phẩm. Quản lý đúng IMEI = quản lý đúng tồn kho và giao dịch. 
                 Hôm nay, chúng ta sẽ học toàn bộ quy trình IMEI trên SAP & PDW.
-                <br><br><b>Anh Nam:</b> “Linh sẵn sàng chưa? Hôm nay mình sẽ học IMEI từ A–Z.”  
+                <br><br><b>Anh Nam:</b> “Linh sẵn sàng chưa? Hôm nay mình sẽ học IMEI từ A–Z.”
                 <br><b>Linh:</b> “Dạ, em muốn hiểu thật kỹ để tránh sai sót khi nhập – xuất hàng.”
             </p>
         </div>
@@ -234,13 +272,13 @@ footer {
         </div>
     </div>
 
-    <!-- FRAME 2 -->
+    <!-- ================= FRAME 2 ================= -->
     <div class="frame fade-in">
         <div class="frame-text">
             <h3>Bước quan trọng: Chọn đúng tab Serial Number</h3>
             <p>
                 Khi nhập kho hoặc xuất kho IMEI, phải vào tab “Serial Number” để nhập từng IMEI theo đúng số lượng.
-                <br><br><b>Anh Nam:</b> “Đây là nơi em nhập toàn bộ IMEI, nhớ luôn chọn đúng tab này.”  
+                <br><br><b>Anh Nam:</b> “Đây là nơi em nhập toàn bộ IMEI, nhớ luôn chọn đúng tab này.”
                 <br><b>Linh:</b> “Dạ, em thấy rồi. Nếu quên tab này là sai ngay.”
             </p>
         </div>
@@ -249,13 +287,13 @@ footer {
         </div>
     </div>
 
-    <!-- FRAME 3 -->
+    <!-- ================= FRAME 3 ================= -->
     <div class="frame fade-in">
         <div class="frame-text">
             <h3>Scan IMEI theo từng dòng</h3>
             <p>
                 SAP không tự nhảy dòng. Mỗi IMEI phải được scan vào đúng từng line để hệ thống nhận dạng chính xác.
-                <br><br><b>Anh Nam:</b> “Scan từng IMEI một nhé, đừng scan liên tục.”  
+                <br><br><b>Anh Nam:</b> “Scan từng IMEI một nhé, đừng scan liên tục.”
                 <br><b>Linh:</b> “Dạ, em đang scan từng dòng đúng thứ tự.”
             </p>
         </div>
@@ -264,14 +302,14 @@ footer {
         </div>
     </div>
 
-    <!-- FRAME 4 -->
+    <!-- ================= FRAME 4 ================= -->
     <div class="frame fade-in">
         <div class="frame-text">
             <h3>Lỗi: IMEI nhập thiếu so với số lượng</h3>
             <p>
                 Nếu số IMEI nhỏ hơn số lượng nhập kho, hệ thống sẽ chặn ngay lập tức.
-                <br><br><b>IMEI Bot:</b> “⚠️ Lỗi: IMEI quantity &lt; GR quantity.”  
-                <br><b>Anh Nam:</b> “Khi báo lỗi này, em kiểm tra lại xem còn IMEI nào chưa nhập.”  
+                <br><br><b>IMEI Bot:</b> “⚠️ Lỗi: IMEI quantity &lt; GR quantity.”
+                <br><b>Anh Nam:</b> “Khi báo lỗi này, em kiểm tra lại xem còn IMEI nào chưa nhập.”
                 <br><b>Linh:</b> “Dạ, để em bổ sung ngay.”
             </p>
         </div>
@@ -280,13 +318,13 @@ footer {
         </div>
     </div>
 
-    <!-- FRAME 5 -->
+    <!-- ================= FRAME 5 ================= -->
     <div class="frame fade-in">
         <div class="frame-text">
             <h3>Kiểm tra IMEI trước khi chuyển kho</h3>
             <p>
                 Trước khi chuyển kho, luôn kiểm tra IMEI đang nằm ở kho nào bằng ZMB52 để tránh sai warehouse.
-                <br><br><b>Anh Nam:</b> “Luôn xem IMEI thuộc kho nào trước khi chuyển.”  
+                <br><br><b>Anh Nam:</b> “Luôn xem IMEI thuộc kho nào trước khi chuyển.”
                 <br><b>Linh:</b> “Dạ, em đang check IMEI list đây ạ.”
             </p>
         </div>
@@ -295,14 +333,14 @@ footer {
         </div>
     </div>
 
-    <!-- FRAME 6 -->
+    <!-- ================= FRAME 6 ================= -->
     <div class="frame fade-in">
         <div class="frame-text">
             <h3>Lỗi phổ biến khi chuyển kho</h3>
             <p>
                 Nếu scan IMEI không thuộc kho nguồn, SAP báo lỗi ngay. Không thể chuyển IMEI sai kho.
-                <br><br><b>IMEI Bot:</b> “❌ Error 03 – IMEI not in selected warehouse.”  
-                <br><b>Linh:</b> “Ủa sao lại sai kho ạ?”  
+                <br><br><b>IMEI Bot:</b> “❌ Error 03 – IMEI not in selected warehouse.”
+                <br><b>Linh:</b> “Ủa sao lại sai kho ạ?”
                 <br><b>Anh Nam:</b> “IMEI này đang ở kho khác. Em xem lại ZMB52 nhé.”
             </p>
         </div>
@@ -311,13 +349,13 @@ footer {
         </div>
     </div>
 
-    <!-- FRAME 7 -->
+    <!-- ================= FRAME 7 ================= -->
     <div class="frame fade-in">
         <div class="frame-text">
             <h3>Hiểu nguyên nhân lỗi IMEI</h3>
             <p>
                 Lỗi này xảy ra khi IMEI đang nằm ở kho khác, đã xuất, hoặc bị khóa trạng thái.
-                <br><br><b>IMEI Bot:</b> “IMEI không tồn tại trong kho đã chọn. Vui lòng kiểm tra lại kho gốc.”  
+                <br><br><b>IMEI Bot:</b> “IMEI không tồn tại trong kho đã chọn. Vui lòng kiểm tra lại kho gốc.”
                 <br><b>Linh:</b> “Em hiểu rồi, phải kiểm tra IMEI trước khi thao tác.”
             </p>
         </div>
@@ -326,13 +364,13 @@ footer {
         </div>
     </div>
 
-    <!-- FRAME 8 -->
+    <!-- ================= FRAME 8 ================= -->
     <div class="frame fade-in">
         <div class="frame-text">
             <h3>Xuất kho phải đúng IMEI trên OD</h3>
             <p>
                 Khi xuất hàng, IMEI phải khớp 100% với số lượng trên OD. Sai IMEI = sai tồn ngay lập tức.
-                <br><br><b>Anh Nam:</b> “Em nhập IMEI đúng theo số lượng OD nhé.”  
+                <br><br><b>Anh Nam:</b> “Em nhập IMEI đúng theo số lượng OD nhé.”
                 <br><b>Linh:</b> “Dạ, em đang đối chiếu IMEI với OD.”
             </p>
         </div>
@@ -341,13 +379,13 @@ footer {
         </div>
     </div>
 
-    <!-- FRAME 9 -->
+    <!-- ================= FRAME 9 ================= -->
     <div class="frame fade-in">
         <div class="frame-text">
             <h3>IMEI hợp lệ – hệ thống xác nhận</h3>
             <p>
                 Khi nhập đúng IMEI, SAP hiển thị thông báo màu xanh: IMEI accepted.
-                <br><br><b>Linh:</b> “Em thấy thông báo xanh rồi, vậy là OK đúng không anh?”  
+                <br><br><b>Linh:</b> “Em thấy thông báo xanh rồi, vậy là OK đúng không anh?”
                 <br><b>Anh Nam:</b> “Đúng rồi. Đây là tín hiệu IMEI đã hợp lệ.”
             </p>
         </div>
@@ -356,14 +394,14 @@ footer {
         </div>
     </div>
 
-    <!-- FRAME 10 -->
+    <!-- ================= FRAME 10 ================= -->
     <div class="frame fade-in">
         <div class="frame-text">
             <h3>Cảnh báo: IMEI đã giao dịch trước đó</h3>
             <p>
                 Nếu IMEI đã từng nhập, xuất hoặc có giao dịch khác, hệ thống sẽ chặn ngay.
-                <br><br><b>IMEI Bot:</b> “❌ Error 02 – IMEI already used.”  
-                <br><b>Linh:</b> “Ồ, IMEI này khách trả trước đây đúng không ạ?”  
+                <br><br><b>IMEI Bot:</b> “❌ Error 02 – IMEI already used.”
+                <br><b>Linh:</b> “Ồ, IMEI này khách trả trước đây đúng không ạ?”
                 <br><b>Anh Nam:</b> “Đúng. Phải chọn đúng IMEI đang còn tồn.”
             </p>
         </div>
@@ -372,13 +410,13 @@ footer {
         </div>
     </div>
 
-    <!-- FRAME 11 -->
+    <!-- ================= FRAME 11 ================= -->
     <div class="frame fade-in">
         <div class="frame-text">
             <h3>ZMB52 – Báo cáo quan trọng nhất</h3>
             <p>
                 Dùng ZMB52 để xem IMEI đang nằm ở kho nào, trạng thái gì, còn tồn hay không.
-                <br><br><b>Linh:</b> “Em kiểm tra ZMB52 rồi, IMEI này đang ở kho 001 đúng ạ.”  
+                <br><br><b>Linh:</b> “Em kiểm tra ZMB52 rồi, IMEI này đang ở kho 001 đúng ạ.”
                 <br><b>Anh Nam:</b> “Tốt, báo cáo này phải xem hằng ngày.”
             </p>
         </div>
@@ -387,14 +425,14 @@ footer {
         </div>
     </div>
 
-    <!-- FRAME 12 -->
+    <!-- ================= FRAME 12 ================= -->
     <div class="frame fade-in">
         <div class="frame-text">
             <h3>Hoàn thành buổi học IMEI</h3>
             <p>
                 Nắm vững IMEI giúp store giảm sai sót, đối soát nhanh, và phục vụ khách chính xác hơn.
-                <br><br><b>Anh Nam:</b> “Chúc mừng, Linh đã hoàn thành toàn bộ quy trình IMEI.”  
-                <br><b>Linh:</b> “Cám ơn anh, em tự tin hơn rất nhiều.”  
+                <br><br><b>Anh Nam:</b> “Chúc mừng, Linh đã hoàn thành toàn bộ quy trình IMEI.”
+                <br><b>Linh:</b> “Cám ơn anh, em tự tin hơn rất nhiều.”
                 <br><b>IMEI Bot:</b> “Status: Training Completed. Tỷ lệ lỗi dự kiến: Giảm 90%.”
             </p>
         </div>
